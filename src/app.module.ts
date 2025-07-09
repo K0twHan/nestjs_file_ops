@@ -14,7 +14,7 @@ import { APP_GUARD } from '@nestjs/core';
       serveRoot: '/uploads',
     }),
     ThrottlerModule.forRoot([
-      { name: 'long', ttl: 1000000, limit: 1 }, // Example throttler configuration
+      { name: 'long', ttl: 1000, limit: 10000 }, // Example throttler configuration
     ]),
     FileModule,
   ],
